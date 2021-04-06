@@ -8,7 +8,7 @@ import (
 )
 
 func findSystemLoad(s string) *float64 {
-	e := regexp.MustCompile(`System load:\ +[0-9]+.[0-9]+`)
+	e := regexp.MustCompile(`System load:\ +([0-9]+\.[0-9]+)`)
 	sm := e.FindStringSubmatch(s)
 
 	if sm == nil {
